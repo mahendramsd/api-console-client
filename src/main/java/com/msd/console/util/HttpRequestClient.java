@@ -17,7 +17,7 @@ import java.util.List;
 
 public class HttpRequestClient {
 
-    private final static String endPoint = "http://localhost:8080/api/";
+    private final static String endPoint = "http://35.202.2.27:8080/api/";
 
     public static JSONObject authenticate(String username, String password) throws IOException {
         HttpPost post = new HttpPost(endPoint.concat("authenticate"));
@@ -137,7 +137,6 @@ public class HttpRequestClient {
         String result = "";
         try (CloseableHttpClient httpClient = HttpClients.createDefault();
              CloseableHttpResponse response = httpClient.execute(get)) {
-            System.out.println(response);
             result = EntityUtils.toString(response.getEntity());
         }
         return new JSONArray(result);

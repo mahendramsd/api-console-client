@@ -6,6 +6,7 @@
 
     <groupId>com.msd</groupId>
     <artifactId>api-console-client</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -54,6 +55,7 @@
 
     </dependencies>
     <build>
+        <finalName>api-console-client</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -61,7 +63,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.msd.console.main.Main</mainClass>
+                            <mainClass>com.msd.console.main.Client</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
